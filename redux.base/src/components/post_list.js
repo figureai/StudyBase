@@ -30,7 +30,7 @@ class post_list extends Component {
 // 将 指定 的 store 合并到 props 传给组件
 const mapStateToProps = (state, ownProps) => {
     return {
-        post: state.post
+        post: state.postReducer
     }
 } 
 
@@ -38,7 +38,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         test: ()=>{
-            // console.log('lch---i am test')
             dispatch(loadPostsAction)
         }
     }

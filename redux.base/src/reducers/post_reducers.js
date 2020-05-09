@@ -1,3 +1,5 @@
+
+
 const postReducer = function(state = {list: [{title: '你好'}]}, action) {
     switch (action.type) {
         case 'LOAD_POSTS':
