@@ -214,3 +214,21 @@ select cno from score group by cno having count(*) > 3;
 select tno from course where cno in (select cno from score group by cno having count(*) > 3);
 -- 之后再从教会表中找出教师名
 select * from teacher where tno in (select tno from course where cno in (select cno from score group by cno having count(*) > 3));
+
+
+-- 23、查询 95033 和 95031 班的学生
+select * from student where class in ('95033','95031');
+
+-- 24、查询存在有85分以上成绩的课程cno
+select distinct cno from score where degree >= 85;
+
+-- 25、查询出‘计算机系’教师所教课程的成绩表
+select tno from teacher where depart = '计算机系';
+select cno from course where tno in (select tno from teacher where depart = '计算机系');
+select * from score where cno in (select cno from course where tno in (select tno from teacher where depart = '计算机系'));
+
+-- 26、查询‘计算机系’ 与 ‘电子工程系’ 不同职称的教师的 tname 和 prof
+select prof from teacher where depart='电子工程系'
+select * from teacher where depart='计算机系' and prof not in(select prof from teacher where depart='电子工程系')
+union
+select * from teacher where depart='电子工程系' and prof not in (select prof from teacher where depart='计算机系');
