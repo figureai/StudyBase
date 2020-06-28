@@ -9,7 +9,7 @@ const app = new Koa()
 // 手动注册router
 // app.use(book.routes())
 // app.use(classic.routes())
-
+// yarn global add nodemon --prefix /usr/local 
 
 // 使用 require-directory 自动注册 router
 const modules = requireDirectory(module, './app/api/v1', {
