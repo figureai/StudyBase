@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.13.0"
+    "axios": "^0.19.2",
+    "koa": "^2.13.0",
+    "koa-router": "^9.0.1",
+    "require-directory": "^2.1.1"
   }
 }
