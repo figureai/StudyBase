@@ -8,7 +8,6 @@ const LoginType = {
     ADMIN_EMAIL: 200,
     isThisType
 }
-console.log('lch--000-', isThisType('202'))
 module.exports = {
     LoginType
 }

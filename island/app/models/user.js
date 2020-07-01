@@ -18,6 +18,20 @@ class User extends Model {
         }
         return user
     }
+
+    static async getUserByOpenId(openid) {
+        let user = await User.findOne({
+            where: {
+                openid
+            }
+        })
+        if(!user) {
+            user = await User.create({
+                openid
+            })
+        }
+        return user
+    }
 }
 
 User.init({
