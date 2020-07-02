@@ -15,8 +15,16 @@ const sequelize = new Sequelize(dbName, user, password, {
     define: {
         timestamps: true,  // 自动添加 createAt updateAt 字段
         paranoid: true,     // 是否添加delete time字段
-        underscored: true   // 字段为下划线命名 比如 createAt 变成 create_at
-    }
+        underscored: true,   // 字段为下划线命名 比如 createAt 变成 create_at
+        scopes: {
+            noTime: {
+                attributes: {
+                    exclude:['updatedAt','deletedAt','createdAt']
+                }
+            }
+        }
+    },
+    
 })
 // 同步所有模型
 sequelize.sync()

@@ -5,10 +5,10 @@ const {Sequelize, Model, DataTypes} = require('sequelize')
 const classicFields = {
     image: DataTypes.STRING,
     title: DataTypes.STRING,
-    pubdate: DataTypes.STRING,
+    pubdate: DataTypes.DATE,
     content: DataTypes.STRING,
-    fav_nums: DataTypes.STRING,
-    type: DataTypes.STRING
+    fav_nums: DataTypes.INTEGER,
+    type: DataTypes.INTEGER
 }
 
 class Movie extends Model {

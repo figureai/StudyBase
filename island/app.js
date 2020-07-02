@@ -1,3 +1,4 @@
+require('module-alias/register')
 const Koa = require('koa')
 const InitManager = require('./core/init')
 const koaBody = require('koa-body')({

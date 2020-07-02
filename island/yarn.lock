@@ -490,6 +490,11 @@ mime-types@^2.1.18, mime-types@~2.1.24:
   dependencies:
     mime-db "1.44.0"
 
+module-alias@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npm.taobao.org/module-alias/download/module-alias-2.2.2.tgz#151cdcecc24e25739ff0aa6e51e1c5716974c0e0"
+  integrity sha1-FRzc7MJOJXOf8KpuUeHFcWl0wOA=
+
 moment-timezone@^0.5.31:
   version "0.5.31"
   resolved "https://registry.npm.taobao.org/moment-timezone/download/moment-timezone-0.5.31.tgz#9c40d8c5026f0c7ab46eda3d63e49c155148de05"

@@ -8,6 +8,14 @@ const LoginType = {
     ADMIN_EMAIL: 200,
     isThisType
 }
+
+const ArtType = {
+    MUSIC: 100,     // 音乐
+    MOVIE: 200,     // 电影
+    SENTENCE: 300,  // 句子
+    isThisType
+}
 module.exports = {
-    LoginType
+    LoginType,
+    ArtType
 }

@@ -12,7 +12,7 @@ const catchError = async (ctx, next) => {
                 msg,
                 request: `${ctx.method} ${ctx.path}`,
             }
-            ctx.status = code
+            // ctx.status = code
         } else{
             ctx.body = {
                 msg: '服务器报错了~',

@@ -1,6 +1,6 @@
 const {Rule, LinValidator} = require('../../core/lin-validator-v2')
 const {User} = require('../models/user')
-const {LoginType } = require('../lib/enum')
+const {LoginType, ArtType } = require('../lib/enum')
 const { extend } = require('lodash')
 class PositiveIntegerValidator extends LinValidator {
     constructor() {
@@ -91,16 +91,29 @@ class EmptyValidator extends LinValidator {
     }
 }
 
+class LikeValidator extends LinValidator {
+    constructor() {
+        super()
+        this.art_id = [
+            new Rule('isLength', 'art_id不能为空', {min:1}),
+            new Rule('isInt', '需要是正整数', {min:0})
+        ]
+    }
+
+    validateArtType(vals) {
+        if(!vals.body.type) {
+            throw new Error('type是必须参数')
+        }
+        if(!ArtType.isThisType(vals.body.type)) {
+            throw new Error('type参数不合法')
+        }
+    }
+}
+
 module.exports = {
     PositiveIntegerValidator,
     RegisterValidator,
     TokenValidator,
-    EmptyValidator
+    EmptyValidator,
+    LikeValidator,
 }
-
-// {
-//     "nickname":"7yue",
-//     "email":"12345@qq.com",
-//     "password1":"123123",
-//     "password2":"123123"
-// }

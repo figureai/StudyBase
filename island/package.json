@@ -2,7 +2,7 @@
   "name": "island",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,9 +18,21 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.0.1",
     "lodash": "^4.17.15",
+    "module-alias": "^2.2.2",
     "mysql2": "^2.1.0",
     "require-directory": "^2.1.1",
     "sequelize": "^6.2.3",
     "validator": "^13.1.1"
+  },
+
+  "_moduleAliases": {
+    "@root": ".", 
+    "@modles": "app/models",
+    "@core": "core",
+    "@services": "app/services",
+    "@middlewares": "middlewares",
+    "@validator": "app/validators/validator.js",
+    "@config": "config/config.js",
+    "@enum": "app/lib/enum.js"
   }
 }
