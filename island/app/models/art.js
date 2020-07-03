@@ -65,7 +65,8 @@ class Art {
                 arts = await Music.scope('noTime').findAll(finder)
                 break;
             case ArtType.MOVIE://movie
-                arts = await Movie.scope('noTime').findAll(finder)
+                arts = await Movie.scope('noTime').fin
+                dAll(finder)
                 break;
             case ArtType.SENTENCE://sentence
                 arts = await Sentence.scope('noTime').findAll(finder)

@@ -13,6 +13,7 @@ const ArtType = {
     MUSIC: 100,     // 音乐
     MOVIE: 200,     // 电影
     SENTENCE: 300,  // 句子
+    BOOK: 400,      // 书籍
     isThisType
 }
 module.exports = {

@@ -27,7 +27,7 @@
 
   "_moduleAliases": {
     "@root": ".", 
-    "@modles": "app/models",
+    "@models": "app/models",
     "@core": "core",
     "@services": "app/services",
     "@middlewares": "middlewares",
